@@ -1,56 +1,48 @@
 package com.example.project;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Casino {
-    private String ID;
-    private String Login;
-    private String Name;
-    private String Location;
-    private int Rating;
 
-    // Getters och Setters
+    @SerializedName("ID")
+    private String id;
+
+    @SerializedName("login")
+    private String login;
+
+    @SerializedName("name")
+    private String name;
+
+    @SerializedName("location")
+    private String location;
+
+    @SerializedName("size")
+    private String size;
+
+    public Casino(String id, String login, String name, String location, String size) {
+        this.id = id;
+        this.login = login;
+        this.name = name;
+        this.location = location;
+        this.size = size;
+    }
+
     public String getID() {
-        return ID;
-    }
-
-    public void setID(String ID) {
-        this.ID = ID;
-    }
-
-    public String getLogin() {
-        return Login;
-    }
-
-    public void setLogin(String login) {
-        this.Login = login;
+        return id;
     }
 
     public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-        this.Name = name;
+        return name;
     }
 
     public String getLocation() {
-        return Location;
+        return location;
     }
 
-    public void setLocation(String location) {
-        this.Location = location;
-    }
-
-    public int getRating() {
-        return Rating;
-    }
-
-    public void setRating(int rating) {
-        this.Rating = rating;
-    }
-
-    @Override
-    public String toString() {
-        return Name;
+    public String getSize(){
+        return size;
     }
 
 }
+
+
